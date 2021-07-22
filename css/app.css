@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@300&display=swap");
+
+:root {
+  --grey: rgb(45, 45, 45);
+  --white: white;
+  --colorGazoil: #7db69e;
+  --colorRed: #f44242;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  color: var(--grey);
+}
+h1,
+h4 {
+  font-family: "Quicksand", sans-serif;
+}
+h4 {
+  font-size: 1.2rem;
+}
+.txt-color-gazoil {
+  color: var(--colorGazoil);
+}
+.txt-color-red {
+  color: var(--colorRed);
+}
+.txt-color-white {
+  color: var(--white);
+}
+
+.hero {
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+  color: var(--white);
+  padding: 100px 50px;
+  background-image: url(../images/cb.jpg);
+  background-position-y: 75%;
+  background-size: cover;
+  z-index: 1;
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+.hero h1 {
+  margin-bottom: 0;
+}
+.hero h1::first-letter {
+  color: var(--colorGazoil);
+}
+.hero h2 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.row {
+  display: flex;
+}
+.column {
+  flex: 1;
+  padding: 20px 10px;
+}
+.column::first-letter {
+  text-transform: uppercase;
+}
+.column .percent {
+  font-size: 0.8rem;
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(223, 179, 179, 0.8);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+.column ul,
+.column li {
+  list-style: none;
+  padding: 0;
+}
+.column li {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+  border-top: 1px solid var(--grey);
+}
+.column li .montant {
+  font-weight: bold;
+}
+.column li:nth-child(even) {
+  background-color: #e1e1e1;
+}
+
+.credit {
+  background-color: var(--colorGazoil);
+}
+
+.debit {
+  background-color: var(--colorRed);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+input,
+select {
+  padding: 10px;
+  margin: 0 2px;
+}
+input[type="text"] {
+  width: 360px;
+}
+input[type="number"] {
+  width: 120px;
+}
+button {
+  border: none;
+  background: none;
+  transform: scaleX(-1);
+  font-size: 2rem;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: 1260px;
+  margin: auto;
+}
